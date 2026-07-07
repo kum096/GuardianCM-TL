@@ -34,7 +34,7 @@ export const Navbar = () => {
         }`}>
           <a href="#" className="flex items-center gap-3">
             <div className="p-1 rounded-xl group-hover:scale-110 transition-transform duration-300">
-              <img src="/logo.png" alt="GuardianCM Logo" className="w-10 h-10 object-contain" />
+              <img src="guardiancm-site/logo.png" alt="GuardianCM Logo" className="w-10 h-10 object-contain" />
             </div>
             <span className="font-bold text-2xl tracking-tight text-slate-900">{SITE_CONFIG.name}</span>
           </a>
