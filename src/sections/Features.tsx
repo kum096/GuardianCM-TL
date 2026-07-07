@@ -3,8 +3,8 @@ import { FEATURES } from '../constants/content';
 
 export const Features = () => {
   return (
-    <Section id="features" className="py-48 bg-white border-t border-slate-50">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+    <Section id="features" className="py-24 md:py-48 bg-white border-t border-slate-50">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16">
         {FEATURES.slice(0, 4).map((feature, index) => (
           <div key={feature.title} className="flex flex-col">
             <span className="text-slate-900 font-bold text-[11px] tracking-[0.4em] uppercase mb-8 opacity-20">
