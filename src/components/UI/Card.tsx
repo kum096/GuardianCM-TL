@@ -1,24 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { ReactNode } from 'react';
 
 interface CardProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
-  delay?: number;
 }
 
-export const Card = ({ children, className = '', delay = 0 }: CardProps) => {
+export const Card = ({ children, className = '' }: CardProps) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay }}
-      whileHover={{ y: -5 }}
-      className={`glass p-8 rounded-3xl transition-all duration-300 ${className}`}
+    <div
+      className={`bg-white border border-slate-100 p-10 rounded-[2.5rem] smooth-shadow hover:border-guardian/20 transition-all duration-500 ${className}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 };
 
@@ -28,12 +21,12 @@ export const Section = ({
   className = '',
   containerClassName = ''
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   id?: string;
   className?: string;
   containerClassName?: string;
 }) => (
-  <section id={id} className={`py-24 px-6 md:px-12 ${className}`}>
+  <section id={id} className={`px-6 md:px-12 ${className}`}>
     <div className={`max-w-7xl mx-auto ${containerClassName}`}>
       {children}
     </div>
