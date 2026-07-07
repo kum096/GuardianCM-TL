@@ -13,19 +13,19 @@ export const Button = ({
   className = '',
   ...props
 }: ButtonProps) => {
-  const baseStyles = "inline-flex items-center justify-center rounded-2xl font-semibold transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer";
+  const baseStyles = "inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer tracking-tight";
 
   const variants = {
-    primary: "bg-guardian text-white hover:bg-guardian-dark hover:shadow-xl hover:shadow-guardian/20 active:scale-95",
-    secondary: "bg-slate-900 text-white hover:bg-slate-800 active:scale-95",
-    outline: "border-2 border-slate-200 bg-transparent hover:border-guardian hover:text-guardian active:scale-95",
-    ghost: "bg-transparent hover:bg-slate-50 text-slate-600 active:scale-95"
+    primary: "bg-guardian text-white hover:opacity-90 active:scale-[0.98]",
+    secondary: "bg-slate-900 text-white hover:bg-slate-800 active:scale-[0.98]",
+    outline: "border border-slate-200 bg-transparent hover:border-slate-900 hover:text-slate-900 active:scale-[0.98]",
+    ghost: "bg-transparent hover:bg-slate-50 text-slate-600 active:scale-[0.98]"
   };
 
   const sizes = {
-    sm: "px-5 py-2.5 text-sm",
-    md: "px-7 py-3.5 text-base",
-    lg: "px-10 py-5 text-lg"
+    sm: "px-6 py-2 text-sm",
+    md: "px-8 py-3 text-base",
+    lg: "px-12 py-4 text-lg"
   };
 
   return (

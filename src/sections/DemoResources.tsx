@@ -1,46 +1,30 @@
-import { Section, Card } from '../components/UI/Card';
+import { Section } from '../components/UI/Card';
 import { DEMO_RESOURCES } from '../constants/content';
-import { Button } from '../components/UI/Button';
 import { ArrowRight } from 'lucide-react';
-
-const Logo = () => (
-  <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center p-3 shadow-inner">
-     <img src="/logo.png" alt="GuardianCM Logo" className="w-full h-full object-contain" onError={(e) => {
-       // Fallback if logo.png doesn't exist yet
-       e.currentTarget.style.display = 'none';
-       e.currentTarget.parentElement!.innerHTML = '<div class="w-8 h-8 bg-guardian rounded-full" />'
-     }} />
-  </div>
-);
 
 export const DemoResources = () => {
   return (
-    <Section id="resources" className="bg-white">
-      <div className="text-center mb-24">
-        <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">Experience GuardianCM</h2>
-        <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
-          The ecosystem is ready. Dive into the future of community protection today.
+    <Section id="resources" className="py-64 bg-slate-50">
+      <div className="flex flex-col mb-24">
+        <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-slate-900 uppercase mb-6">Ready to Deploy</h2>
+        <p className="text-xl text-slate-600 max-w-xl font-normal leading-relaxed">
+          Experience the ecosystem on your device or explore our vision in depth.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {DEMO_RESOURCES.map((item) => (
-          <Card
+          <a
             key={item.title}
-            className="flex flex-col p-12 bg-slate-50/50 border-none group hover:bg-white"
+            href={item.link}
+            className="flex flex-col p-16 bg-white border border-slate-200 rounded-[3rem] hover:bg-slate-50 transition-all duration-500 group outline-none"
           >
-            <div className="mb-10">
-              <Logo />
+            <h3 className="text-3xl font-bold mb-6 tracking-tight text-slate-900 uppercase">{item.title}</h3>
+            <p className="text-slate-600 leading-relaxed mb-16 font-normal text-lg max-w-md">{item.description}</p>
+            <div className="mt-auto flex items-center text-xs font-bold uppercase tracking-[0.3em] text-slate-900 group-hover:text-guardian transition-colors">
+              {item.cta} <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </div>
-            <h3 className="text-3xl font-bold mb-6 tracking-tight text-slate-900">{item.title}</h3>
-            <p className="text-slate-500 mb-12 text-lg leading-relaxed font-medium">{item.description}</p>
-
-            <div className="mt-auto">
-              <Button variant="secondary" className="w-full py-5 text-lg group/btn">
-                {item.cta} <ArrowRight className="ml-3 w-5 h-5 group-hover/btn:translate-x-2 transition-transform" />
-              </Button>
-            </div>
-          </Card>
+          </a>
         ))}
       </div>
     </Section>

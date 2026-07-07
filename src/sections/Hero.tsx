@@ -1,38 +1,32 @@
 import { Button } from '../components/UI/Button';
-import { SITE_CONFIG } from '../constants/content';
-import { Globe, Smartphone } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-40 pb-32 overflow-hidden bg-pro">
-      {/* Sophisticated Background Accents */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] bg-guardian/5 blur-[160px] rounded-full" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[70%] h-[70%] bg-emerald-400/5 blur-[160px] rounded-full" />
-      </div>
-
-      <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
-        <div className="inline-flex items-center gap-2 py-2 px-5 rounded-full bg-slate-50 border border-slate-100 text-slate-500 text-sm font-bold mb-10">
-          <span className="w-2 h-2 rounded-full bg-guardian animate-pulse" />
-          {SITE_CONFIG.version} Available Now
-        </div>
-
-        <h1 className="text-6xl md:text-[5.5rem] font-black tracking-tight mb-10 text-slate-900 leading-[1.05]">
-          Protecting Communities.<br />
-          <span className="text-gradient">Securing the Future.</span>
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-48 pb-32 overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-6 text-center relative z-10 flex flex-col items-center">
+        <h1 className="text-7xl md:text-[11rem] font-bold tracking-tighter mb-12 text-slate-900 leading-[0.8]">
+          GUARDIANCM
         </h1>
-
-        <p className="max-w-3xl mx-auto text-xl md:text-2xl text-slate-500 mb-16 leading-relaxed font-medium">
-          {SITE_CONFIG.tagline}. A premium ecosystem designed for digital patriotism and elite community safety.
+        <p className="text-xl md:text-3xl text-slate-600 mb-16 tracking-tight font-medium max-w-3xl leading-relaxed">
+          Elite Community Safety. AI-Powered Security.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <Button size="lg" className="w-full sm:w-auto gap-3">
-            <Globe className="w-6 h-6" /> Launch Web Demo
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-32">
+          <Button variant="secondary" className="px-16 py-5 text-lg rounded-full">
+            Launch Web Demo
           </Button>
-          <Button variant="outline" size="lg" className="w-full sm:w-auto gap-3">
-            <Smartphone className="w-6 h-6" /> Download App
+          <Button variant="outline" className="px-16 py-5 text-lg rounded-full">
+            Download App
           </Button>
+        </div>
+      </div>
+
+      {/* Minimal Visual Line - Better Spacing */}
+      <div className="w-full max-w-5xl px-6 mt-auto">
+        <div className="h-[1px] w-full bg-slate-100 relative">
+           <div className="absolute top-0 left-0 -translate-y-1/2 bg-white pr-4 text-[10px] font-bold tracking-[0.4em] text-slate-400 uppercase">
+             Shield Protocol Active
+           </div>
         </div>
       </div>
     </section>

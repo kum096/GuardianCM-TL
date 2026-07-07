@@ -2,7 +2,6 @@
 import { Navbar } from './components/Navbar';
 import { Hero } from './sections/Hero';
 import { Features } from './sections/Features';
-import { Technology } from './sections/Technology';
 import { DemoResources } from './sections/DemoResources';
 import { Vision } from './sections/Vision';
 import { Footer } from './sections/Footer';
@@ -14,9 +13,8 @@ function App() {
       <main className="relative">
         <Hero />
         <Features />
-        <Technology />
-        <DemoResources />
         <Vision />
+        <DemoResources />
       </main>
       <Footer />
     </div>
