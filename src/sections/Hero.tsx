@@ -1,8 +1,7 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/UI/Button';
 import { SITE_CONFIG } from '../constants/content';
-import { Shield, Smartphone, Globe, Lock } from 'lucide-react';
+import { Smartphone, Globe, Lock } from 'lucide-react';
 
 const FloatingIcon = ({ icon: Icon, className, color }: any) => (
   <div className={`absolute p-4 glass rounded-2xl ${className}`}>
@@ -50,7 +49,6 @@ export const Hero = () => {
 
         {/* Floating Icons for Visual Interest */}
         <div className="hidden lg:block">
-          <FloatingIcon icon={Shield} color="text-guardian" className="top-20 -left-20" />
           <FloatingIcon icon={Lock} color="text-emerald-500" className="bottom-20 -left-10" />
           <FloatingIcon icon={Smartphone} color="text-slate-400" className="top-40 -right-20" />
           <FloatingIcon icon={Globe} color="text-guardian" className="bottom-40 -right-10" />

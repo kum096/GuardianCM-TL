@@ -1,4 +1,3 @@
-import React from 'react';
 import { Section } from '../components/UI/Card';
 import { motion } from 'framer-motion';
 

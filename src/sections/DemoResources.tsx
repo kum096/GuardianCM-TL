@@ -1,4 +1,3 @@
-import React from 'react';
 import { Section, Card } from '../components/UI/Card';
 import { DEMO_RESOURCES } from '../constants/content';
 import { Button } from '../components/UI/Button';

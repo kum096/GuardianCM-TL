@@ -1,4 +1,3 @@
-import React from 'react';
 import { Section, Card } from '../components/UI/Card';
 import { FEATURES } from '../constants/content';
 import { motion } from 'framer-motion';

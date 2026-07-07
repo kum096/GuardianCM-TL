@@ -1,5 +1,4 @@
-import React from 'react';
-import { Shield, GitBranch, Briefcase, Mail } from 'lucide-react';
+import { GitBranch, Briefcase, Mail } from 'lucide-react';
 import { SITE_CONFIG } from '../constants/content';
 
 export const Footer = () => {
