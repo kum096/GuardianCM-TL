@@ -12,12 +12,16 @@ export const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 mb-20 md:mb-32 w-full sm:w-auto">
-          <Button variant="secondary" className="w-full sm:w-auto px-12 md:px-16 py-4 md:py-5 text-base md:text-lg rounded-full">
-            Launch Web Demo
-          </Button>
-          <Button variant="outline" className="w-full sm:w-auto px-12 md:px-16 py-4 md:py-5 text-base md:text-lg rounded-full">
-            Download App
-          </Button>
+          <a href={SITE_CONFIG.links.demo} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Button variant="secondary" className="w-full px-12 md:px-16 py-4 md:py-5 text-base md:text-lg rounded-full">
+              Launch Web Demo
+            </Button>
+          </a>
+          <a href={SITE_CONFIG.links.apk} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+            <Button variant="outline" className="w-full px-12 md:px-16 py-4 md:py-5 text-base md:text-lg rounded-full">
+              Download App
+            </Button>
+          </a>
         </div>
       </div>
 

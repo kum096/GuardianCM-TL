@@ -26,10 +26,10 @@ export const SITE_CONFIG = {
   version: "v1.0.0",
   year: 2026,
   links: {
-    demo: "#",
-    apk: "#",
+    demo: "https://guardiancmv1.vercel.app",
+    apk: "https://github.com/kum096/G-CM/releases/download/v1.0.0%2B1/GuardianCM.apk",
     pitch: "#",
-    github: "#",
+    github: "https://github.com/kum096/G-CM",
     email: "contact@guardiancm.tech",
     linkedin: "#"
   }

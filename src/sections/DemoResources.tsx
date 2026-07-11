@@ -17,6 +17,8 @@ export const DemoResources = () => {
           <a
             key={item.title}
             href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex flex-col p-8 md:p-16 bg-white border border-slate-200 rounded-[2rem] md:rounded-[3rem] hover:bg-slate-50 transition-all duration-500 group outline-none"
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 tracking-tight text-slate-900 uppercase">{item.title}</h3>

@@ -16,9 +16,33 @@ export const Footer = () => {
         </div>
 
         <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 md:gap-16">
-          <FooterColumn title="Platform" links={['Web Demo', 'Android App', 'Safety Maps', 'Cyber Academy']} />
-          <FooterColumn title="Company" links={['Our Vision', 'Contact', 'Privacy', 'Terms']} />
-          <FooterColumn title="Social" links={['GitHub', 'LinkedIn', 'Email', 'Twitter']} />
+          <FooterColumn
+            title="Platform"
+            links={[
+              { name: 'Web Demo', href: SITE_CONFIG.links.demo },
+              { name: 'Android App', href: SITE_CONFIG.links.apk },
+              { name: 'Safety Maps', href: '#' },
+              { name: 'Cyber Academy', href: '#' }
+            ]}
+          />
+          <FooterColumn
+            title="Company"
+            links={[
+              { name: 'Our Vision', href: '#vision' },
+              { name: 'Contact', href: `mailto:${SITE_CONFIG.links.email}` },
+              { name: 'Privacy', href: '#' },
+              { name: 'Terms', href: '#' }
+            ]}
+          />
+          <FooterColumn
+            title="Social"
+            links={[
+              { name: 'GitHub', href: SITE_CONFIG.links.github },
+              { name: 'LinkedIn', href: SITE_CONFIG.links.linkedin },
+              { name: 'Email', href: `mailto:${SITE_CONFIG.links.email}` },
+              { name: 'Twitter', href: '#' }
+            ]}
+          />
         </div>
       </div>
 
@@ -35,14 +59,19 @@ export const Footer = () => {
   );
 };
 
-const FooterColumn = ({ title, links }: { title: string, links: string[] }) => (
+const FooterColumn = ({ title, links }: { title: string, links: { name: string, href: string }[] }) => (
   <div className="flex flex-col gap-8">
     <h4 className="text-[11px] font-bold text-slate-900 uppercase tracking-[0.4em] opacity-40">{title}</h4>
     <ul className="flex flex-col gap-4">
       {links.map(link => (
-        <li key={link}>
-          <a href="#" className="text-slate-600 hover:text-slate-900 text-lg transition-colors font-normal">
-            {link}
+        <li key={link.name}>
+          <a
+            href={link.href}
+            target={link.href.startsWith('http') ? "_blank" : undefined}
+            rel={link.href.startsWith('http') ? "noopener noreferrer" : undefined}
+            className="text-slate-600 hover:text-slate-900 text-lg transition-colors font-normal"
+          >
+            {link.name}
           </a>
         </li>
       ))}
