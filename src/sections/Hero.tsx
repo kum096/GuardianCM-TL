@@ -1,4 +1,5 @@
 import { Button } from '../components/UI/Button';
+import { SITE_CONFIG } from '../constants/content';
 
 export const Hero = () => {
   return (
